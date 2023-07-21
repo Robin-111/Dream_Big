@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Rose', cursive;
+  overflow-x: hidden;
+  overflow-x: hidden  !important;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, right top, left top, from(#ba7453), to(#d1a984)) !important;
+  background: linear-gradient(to left, #ba7453, #d1a984) !important;
+  z-index: -1;
+}
+
+.logo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  font-size: 44px;
+}
+
+#Layer_1 {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 6rem;
+  height: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.headline {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  font-size: 100px;
+  -webkit-transform: translate(-20%, -70%);
+          transform: translate(-20%, -70%);
+  color: white;
+  z-index: 3;
+}
+
+.hero::after {
+  content: '';
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: .2;
+  left: 0;
+  top: 0;
+}
+
+#leaf {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cursor {
+  position: fixed;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  z-index: 1;
+  background: red;
+  -webkit-transition: 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 90000;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.cursor.active {
+  opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.cursor.menu-active {
+  opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.cursor.hovered {
+  opacity: 1;
+}
+
+.cursor-contact {
+  background: black;
+}
+
+.cursor-follower {
+  position: fixed;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  z-index: 1;
+  -webkit-transition: 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+.cursor-follower.active {
+  opacity: 1;
+  -webkit-transform: scale(2.3);
+          transform: scale(2.3);
+  background: #9c0d0d;
+  opacity: .2;
+}
+
+.cursor-follower.menu-active {
+  opacity: 1;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+.cursor-follower.hovered {
+  opacity: 1;
+}
+
+.cursor-follower-contact.active {
+  background: black;
+  opacity: 1;
+}
+
+.cursor-follower-contact.active {
+  background: #BD295D;
+  opacity: .4;
+  border: 1px solid #daabcf;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+/*# sourceMappingURL=style.css.map */
